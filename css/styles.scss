@@ -1,0 +1,101 @@
+// Variables
+$primary-orange: #ff7505;
+$clear-orange: #ff9d4d;
+$strong-orange: #f06b00;
+$font-franklin: 'Libre Franklin',
+sans-serif;
+$negro: #212529;
+//General
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-franklin;
+}
+
+h1 {
+    color: $primary-orange;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contenedor-body {
+    width: 85%;
+    max-width: 150rem;
+    margin: 5rem auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    background-color: $negro;
+    li {
+        list-style: none;
+        margin-right: 2rem;
+        color: white;
+    }
+    ul {
+        padding-left: 0;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0;
+    }
+    i {
+        font-size: 1.5rem;
+    }
+    img {
+        width: 6rem;
+    }
+}
+
+.content {
+    width: 85%;
+    max-width: 150rem;
+}
+
+.btn-naranja {
+    width: 50%;
+    background-color: $clear-orange;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+//Landing Page
+main {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+        font-size: 8rem;
+        font-weight: 600;
+    }
+    h2 {
+        font-size: 5.5rem;
+        color: $negro;
+        font-weight: 100;
+    }
+    h1,
+    h2 {
+        margin: 0 0 1.5rem 0;
+    }
+    .text-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
