@@ -45,6 +45,9 @@ nav {
         margin-right: 2rem;
         color: white;
     }
+    li:hover {
+        color: $clear-orange;
+    }
     ul {
         padding-left: 0;
         font-size: 1.5rem;
