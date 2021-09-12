@@ -9,6 +9,7 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 // Importar rutas
 const indexRoutes = require("./routes/routeindex");
 
@@ -19,12 +20,13 @@ var PORT = process.env.PORT || 3000;
 
 // Middleware  
 app.use(morgan("dev"));
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 // Rutas
 app.use("/", indexRoutes);
 
 // Listener
-app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-});
+const server = app.listen(process.env.PORT || 3000, () => {
+    const port = server.address().port;
+    console.log(`Express is working on port ${port}`);
+  });
