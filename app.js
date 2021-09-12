@@ -19,7 +19,7 @@ var PORT = process.env.PORT || 3000;
 
 
 // Middleware  
-app.use(morgan("dev"));
+//app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 
 // Rutas
