@@ -5,6 +5,9 @@ const path = require("path");
 const config = require("./config");
 
 const app = express();
+app.set("views", "views");
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Importar rutas
 const indexRoutes = require("./routes/routeindex");
@@ -12,9 +15,7 @@ const indexRoutes = require("./routes/routeindex");
 // Configuraciones
 var PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.set("views", "views");
-app.set("view engine", "ejs");
+
 
 // Middleware  
 app.use(morgan("dev"));
