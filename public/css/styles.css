@@ -38,7 +38,7 @@ a {
 .contenedor-body {
   width: 85%;
   max-width: 150rem;
-  margin: 2rem auto 4rem auto;
+  margin: 2rem auto 10rem auto;
 }
 
 nav {
@@ -61,7 +61,7 @@ nav li {
   color: white;
 }
 
-nav li:hover {
+nav lihover {
   color: #ff9d4d;
 }
 
@@ -102,7 +102,17 @@ nav img {
   font-weight: bold;
 }
 
-@media (min-width: 1024px) {
+.btn-naranja a {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .btn-naranja {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1224px) {
   .btn-naranja {
     width: 30%;
     margin-top: 2rem;
@@ -120,7 +130,7 @@ main h1 {
   margin-top: 1.5rem;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1224px) {
   main h1 {
     font-size: 4.5rem;
     text-align: left;
@@ -128,11 +138,11 @@ main h1 {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1224px) {
   main h1 {
     font-size: 6rem;
     text-align: left;
-    margin-top: 0;
+    margin-top: 2rem;
   }
 }
 
@@ -145,8 +155,14 @@ main h2 {
 
 @media screen and (min-width: 768px) {
   main h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  main h2 {
+    font-size: 3.5rem;
   }
 }
 
@@ -168,10 +184,7 @@ main .text-main {
           justify-content: center;
 }
 
-@media (min-width: 768px) {
-  main {
-    margin-bottom: 10rem;
-  }
+@media screen and (min-width: 768px) {
   main .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -180,6 +193,7 @@ main .text-main {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    margin-bottom: 10rem;
   }
 }
 
@@ -254,6 +268,15 @@ main .text-main {
   }
 }
 
+@media (min-width: 1224px) {
+  .mockups-left img {
+    margin-left: 50%;
+  }
+  .mockups-left .app-feature {
+    margin-right: 20%;
+  }
+}
+
 .mockups-right {
   margin-top: 2rem;
   display: -ms-grid;
@@ -296,31 +319,146 @@ main .text-main {
   }
 }
 
+@media (min-width: 1224px) {
+  .mockups-right img {
+    margin-right: 50%;
+  }
+  .mockups-right .app-feature {
+    margin-left: 20%;
+  }
+}
+
 .newsletter {
   background-color: #ff9d4d;
-  height: 30rem;
-  overflow: hidden;
+  height: auto;
+  padding: 2rem 1rem;
 }
 
-.newsletter .content {
-  margin: 5%;
-}
-
-.newsletter .content p {
-  font-size: 4rem;
+.newsletter .contenedor-body {
+  text-align: center;
+  width: 85%;
   color: white;
 }
 
-.newsletter .content input {
-  width: 20%;
-  font-size: 1.5rem;
+.newsletter .contenedor-body h3 {
+  font-size: 2.5rem;
+  margin-top: 5%;
 }
 
-.input {
-  width: 50rem;
+.newsletter .contenedor-body p {
+  font-size: 1.7rem;
 }
 
-.input .btn {
+.newsletter .contenedor-body .copy {
+  margin-top: 5%;
+}
+
+@media screen and (min-width: 768px) {
+  .newsletter .contenedor-body {
+    width: 60%;
+  }
+  .newsletter .contenedor-body h3 {
+    font-size: 4rem;
+  }
+}
+
+.newsletter .forms {
+  display: block;
+  margin: 0 auto;
+}
+
+.newsletter .forms input {
+  height: 58px;
+  width: 100%;
   font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.newsletter .forms button {
+  height: 58px;
+  width: 100%;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter .forms button:hover {
+  background-color: #f06b00;
+}
+
+@media screen and (min-width: 768px) {
+  .newsletter .forms {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 3%;
+  }
+  .newsletter .forms input {
+    margin-right: 1rem;
+    height: 58px;
+    width: 25%;
+    min-width: 20rem;
+    margin-bottom: 2rem;
+  }
+  .newsletter .forms button {
+    width: 24.5rem;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .newsletter .forms {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .newsletter .forms input {
+    margin-right: 1rem;
+    height: 58px;
+    width: 25%;
+  }
+  .newsletter .forms button {
+    width: 20%;
+  }
+}
+
+.actividades h3 {
+  font-weight: 400;
+  font-size: 3rem;
+  color: #f06b00;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .actividades h3 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .actividades h3 {
+    font-size: 4rem;
+  }
+}
+
+.actividades img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .actividades img {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .actividades img {
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -13,7 +13,7 @@ sans-serif;
 $h1: 4rem;
 //Breakpoints
 $breakpoint-tablet: 768px;
-$breakpoint-pc: 1024px;
+$breakpoint-pc: 1224px;
 //Variables Bootstrap
 $input-group-addon-border-color: $clear-orange;
 $primary: $primary-orange;
@@ -55,7 +55,7 @@ a {
 .contenedor-body {
     width: 85%;
     max-width: 150rem;
-    margin: 2rem auto 4rem auto;
+    margin: 2rem auto 10rem auto;
 }
 
 nav {
@@ -69,8 +69,10 @@ nav {
         margin-right: 2rem;
         color: white;
     }
-    li:hover {
-        color: $clear-orange;
+    li {
+        &hover {
+            color: $clear-orange;
+        }
     }
     ul {
         padding-left: 0;
@@ -101,9 +103,18 @@ nav {
     padding: 1.5rem;
     margin-top: 2rem;
     font-weight: bold;
+    a {
+        color: white;
+    }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-tablet) {
+    .btn-naranja {
+        width: 45%;
+    }
+}
+
+@media (min-width: $breakpoint-pc) {
     .btn-naranja {
         width: 30%;
         margin-top: 2rem;
@@ -120,15 +131,15 @@ main {
         font-weight: 600;
         text-align: center;
         margin-top: 1.5rem;
-        @media screen and (min-width: $breakpoint-tablet) and (max-width: 1024px) {
+        @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-pc) {
             font-size: 4.5rem;
             text-align: left;
             margin-top: 0;
         }
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: $breakpoint-pc) {
             font-size: 6rem;
             text-align: left;
-            margin-top: 0;
+            margin-top: 2rem;
         }
     }
     h2 {
@@ -137,8 +148,11 @@ main {
         font-weight: 100;
         text-align: center;
         @media screen and (min-width: $breakpoint-tablet) {
-            font-size: 3.5rem;
+            font-size: 3rem;
             text-align: left;
+        }
+        @media screen and (min-width: $breakpoint-pc) {
+            font-size: 3.5rem;
         }
     }
     h1,
@@ -150,14 +164,11 @@ main {
         flex-direction: column;
         justify-content: center;
     }
-}
-
-@media (min-width: $breakpoint-tablet) {
-    main {
-        margin-bottom: 10rem;
+    @media screen and (min-width: $breakpoint-tablet) {
         .row {
             display: flex;
             flex-direction: row-reverse;
+            margin-bottom: 10rem;
         }
     }
 }
@@ -210,6 +221,14 @@ main {
             grid-column: 2/3;
         }
     }
+    @media (min-width: $breakpoint-pc) {
+        img {
+            margin-left: 50%;
+        }
+        .app-feature {
+            margin-right: 20%;
+        }
+    }
 }
 
 .mockups-right {
@@ -233,28 +252,112 @@ main {
             grid-column: 1/2;
         }
     }
-}
-
-.newsletter {
-    background-color: $clear-orange;
-    height: 30rem;
-    overflow: hidden;
-    .content {
-        margin: 5%;
-        p {
-            font-size: 4rem;
-            color: white;
+    @media (min-width: $breakpoint-pc) {
+        img {
+            margin-right: 50%;
         }
-        input {
-            width: 20%;
-            font-size: 1.5rem;
+        .app-feature {
+            margin-left: 20%;
         }
     }
 }
 
-.input {
-    width: 50rem;
-    .btn {
-        font-size: 1.5rem;
+.newsletter {
+    background-color: $clear-orange;
+    height: auto;
+    padding: 2rem 1rem;
+    .contenedor-body {
+        text-align: center;
+        width: 85%;
+        color: white;
+        h3 {
+            font-size: 2.5rem;
+            margin-top: 5%;
+        }
+        p {
+            font-size: 1.7rem;
+        }
+        .copy {
+            margin-top: 5%;
+        }
+        @media screen and (min-width: $breakpoint-tablet) {
+            width: 60%;
+            h3 {
+                font-size: 4rem;
+            }
+        }
+    }
+    .forms {
+        display: block;
+        margin: 0 auto;
+        input {
+            height: 58px;
+            width: 100%;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        button {
+            height: 58px;
+            width: 100%;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            &:hover {
+                background-color: $strong-orange;
+            }
+        }
+        @media screen and(min-width: $breakpoint-tablet) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3%;
+            input {
+                margin-right: 1rem;
+                height: 58px;
+                width: 25%;
+                min-width: 20rem;
+                margin-bottom: 2rem;
+            }
+            button {
+                width: 24.5rem;
+                margin-bottom: 0;
+            }
+        }
+        @media screen and(min-width: $breakpoint-pc) {
+            flex-wrap: nowrap;
+            input {
+                margin-right: 1rem;
+                height: 58px;
+                width: 25%;
+            }
+            button {
+                width: 20%;
+            }
+        }
+    }
+}
+
+.actividades {
+    h3 {
+        font-weight: 400;
+        font-size: 3rem;
+        color: $strong-orange;
+        text-align: center;
+        @media screen and (min-width: $breakpoint-tablet) {
+            font-size: 3.5rem;
+        }
+        @media screen and (min-width: $breakpoint-pc) {
+            font-size: 4rem;
+        }
+    }
+    img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        @media screen and (min-width: $breakpoint-tablet) {
+            width: 80%;
+        }
+        @media screen and (min-width: $breakpoint-pc) {
+            width: 60%;
+        }
     }
 }
