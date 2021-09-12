@@ -23,6 +23,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/", indexRoutes);
 
 // Listener
-app.listen(app.get("port"), () => {
-    console.log(`Server on port: ${app.get("port")}`);
-});
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
