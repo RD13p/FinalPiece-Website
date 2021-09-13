@@ -296,11 +296,12 @@ main {
             font-size: 1.5rem;
             margin-bottom: 2rem;
         }
-        button {
+        
+        #submit-newsletter {
             height: 58px;
             width: 100%;
             font-size: 1.4rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             &:hover {
                 background-color: $strong-orange;
             }
@@ -317,7 +318,7 @@ main {
                 min-width: 20rem;
                 margin-bottom: 2rem;
             }
-            button {
+            #submit-newsletter {
                 width: 24.5rem;
                 margin-bottom: 0;
             }
@@ -329,7 +330,7 @@ main {
                 height: 58px;
                 width: 25%;
             }
-            button {
+            #submit-newsletter {
                 width: 20%;
             }
         }
@@ -360,4 +361,8 @@ main {
             width: 60%;
         }
     }
+}
+
+.toast{
+    background-color: $strong-orange;
 }

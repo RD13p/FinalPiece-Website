@@ -51,15 +51,19 @@
         <img src="/img/ResumenActividades.png" alt="Resumen actividades">
     </section>
 
+    
+
     <section class="newsletter">
         <div class="contenedor-body">
             <h3>Sé de las primeras personas en completar su vida.</h3>
             <p class="lead">Suscríbete a nuestro newsletter para recibir actualizaciones.</p>
-            <div class="forms">
-                <input name="email" id="email-input" required type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo electrónico">
-                <button type="submit" id="submit-newsletter" class="btn btn-primary btn-lg">Suscribirme</button>
-            </div>
+            <form action="enviar" class="forms">
+                <input  type="email" id="email-input" class="form-control" placeholder="Correo electrónico" required />
+                <input type="submit" value="Suscribirme" id="submit-newsletter" class="btn btn-primary btn-lg">
+            
+            </form>
             <p class="copy">&copy; 2021 Final Piece. </p>
+
         </div>
 
     </section>
