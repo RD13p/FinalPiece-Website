@@ -349,8 +349,10 @@ main .text-main {
   font-size: 1.7rem;
 }
 
-.newsletter .contenedor-body .copy {
+.newsletter .contenedor-body .correo a {
+  color: white;
   margin-top: 5%;
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -460,9 +462,5 @@ main .text-main {
   .actividades img {
     width: 60%;
   }
-}
-
-.toast {
-  background-color: #f06b00;
 }
 /*# sourceMappingURL=styles.css.map */
